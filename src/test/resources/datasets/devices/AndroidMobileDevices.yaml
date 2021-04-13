@@ -1,0 +1,13 @@
+Nexus_6_emulator:
+  !helpers.MobileDevice
+  name: Nexus_6
+  platformName: Android
+  platformVersion: 9
+  isRealDevice: false
+
+Xiaomi_MI8:
+  !helpers.MobileDevice
+  name: Aleksejs Mi Phone
+  platformName: Android
+  platformVersion: 10
+  isRealDevice: true

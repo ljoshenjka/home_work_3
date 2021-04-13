@@ -1,0 +1,6 @@
+iPhone_8_simulator:
+  !helpers.MobileDevice
+  name: iPad (6th generation)
+  platformName: iOS
+  platformVersion: 12.2
+  isRealDevice: false
