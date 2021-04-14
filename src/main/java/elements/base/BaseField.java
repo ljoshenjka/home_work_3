@@ -11,12 +11,23 @@ abstract public class BaseField {
     private final BaseField parent;
 
     public BaseField(By locator) {
-        this(null, locator);
+        this.locator = locator;
+        this.parent = null;
     }
 
     public BaseField(BaseField parent, By locator) {
         this.parent = parent;
         this.locator = locator;
+    }
+
+    public BaseField(By iosBy, By androidBy) {
+        this.locator = WebDriverUtil.isIOS ? iosBy : androidBy;
+        this.parent = null;
+    }
+
+    public BaseField(BaseField parent, By iosBy, By androidBy) {
+        this.parent = parent;
+        this.locator = WebDriverUtil.isIOS ? iosBy : androidBy;
     }
 
     public By getLocator() {

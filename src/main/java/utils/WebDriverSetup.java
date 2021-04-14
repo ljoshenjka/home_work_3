@@ -68,9 +68,6 @@ public class WebDriverSetup {
                 caps.setCapability(IOSMobileCapabilityType.WDA_LOCAL_PORT, getFreePort());
             }
             caps.setCapability(MobileCapabilityType.UDID, device.udid);
-
-            String appPath = System.getProperty("user.home") + "/Downloads/ios_app_qa.ipa";
-            caps.setCapability(MobileCapabilityType.APP, appPath);
         }
         return caps;
     }
@@ -91,13 +88,10 @@ public class WebDriverSetup {
         caps.setCapability(AndroidMobileCapabilityType.NATIVE_WEB_SCREENSHOT, true);
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
         caps.setCapability(IOSMobileCapabilityType.AUTO_ACCEPT_ALERTS, true);
-        caps.setCapability(MobileCapabilityType.NO_RESET, true);
+        caps.setCapability(MobileCapabilityType.NO_RESET, false);
         caps.setCapability(MobileCapabilityType.CLEAR_SYSTEM_FILES, true);
         caps.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, false);
-        caps.setCapability(AndroidMobileCapabilityType.RESET_KEYBOARD, true);
-
-        String appPath = System.getProperty("user.home") + "/Downloads/and_app_qa.apk";
-        caps.setCapability(MobileCapabilityType.APP, appPath);
+        caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/app_build/com.monefy.app.lite_2021-02-01.apk");
         return caps;
     }
 

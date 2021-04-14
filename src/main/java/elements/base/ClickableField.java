@@ -12,6 +12,14 @@ abstract public class ClickableField extends BaseField {
         super(locator);
     }
 
+    public ClickableField(By iosBy, By androidBy) {
+        super(iosBy, androidBy);
+    }
+
+    public ClickableField(BaseField parent, By iosBy, By androidBy) {
+        super(parent, iosBy, androidBy);
+    }
+
     public void click() {
         WebDriverUtil.click(getWebElement());
     }

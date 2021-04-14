@@ -1,13 +1,14 @@
-Nexus_6_emulator:
+Pixel_4_emulator:
   !helpers.MobileDevice
-  name: Nexus_6
+  name: Pixel_4_API_29
   platformName: Android
-  platformVersion: 9
+  platformVersion: 10
   isRealDevice: false
 
 Xiaomi_MI8:
   !helpers.MobileDevice
   name: Aleksejs Mi Phone
+  udid: 3062209
   platformName: Android
   platformVersion: 10
   isRealDevice: true

@@ -12,4 +12,12 @@ public class Label extends StaticField {
     public Label(By locator) {
         super(locator);
     }
+
+    public Label(By iosBy, By androidBy) {
+        super(iosBy, androidBy);
+    }
+
+    public Label(BaseField parent, By iosBy, By androidBy) {
+        super(parent, iosBy, androidBy);
+    }
 }

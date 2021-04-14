@@ -1,10 +1,8 @@
 package utils;
 
-import base.BaseStep;
 import constants.GlobalParams;
 import constants.PropertyConfigs;
 import helpers.DateHelper;
-import helpers.LogHelper;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -54,6 +52,7 @@ public class WebDriverUtil {
     }
 
     public static void closeDriverSession() {
+        closeApp();
         drivers.get().quit();
         drivers.set(null);
     }
@@ -93,7 +92,7 @@ public class WebDriverUtil {
     }
 
     public static byte[] getScreenshot() {
-        return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) getMobileDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
     public static void setImplicitWait() {

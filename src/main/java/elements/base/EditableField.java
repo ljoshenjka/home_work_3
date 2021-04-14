@@ -13,6 +13,14 @@ abstract public class EditableField extends BaseField {
         super(locator);
     }
 
+    public EditableField(By iosBy, By androidBy) {
+        super(iosBy, androidBy);
+    }
+
+    public EditableField(BaseField parent, By iosBy, By androidBy) {
+        super(parent, iosBy, androidBy);
+    }
+
     public void setValue(String value) {
         WebElement element = getWebElement();
         element.clear();

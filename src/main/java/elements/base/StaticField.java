@@ -10,4 +10,12 @@ abstract public class StaticField extends BaseField {
     public StaticField(By locator) {
         super(locator);
     }
+
+    public StaticField(By iosBy, By androidBy) {
+        super(iosBy, androidBy);
+    }
+
+    public StaticField(BaseField parent, By iosBy, By androidBy) {
+        super(parent, iosBy, androidBy);
+    }
 }
